@@ -4,14 +4,12 @@ import random
 import unittest
 
 class RandomTest(unittest.TestCase):
-
 	"""
 	Cette classe teste des foncitonnalités du
 	module random telles que choice, shuffle et range
 	"""
 
 	def test_choice(self):
-
 		"""
 		Cette fonction teste si la fonction
 		random.choice(tableau) renvoie bien
@@ -28,7 +26,6 @@ class RandomTest(unittest.TestCase):
 		self.assertIn(elt, tableau)
 
 	def test_shuffle(self):
-
 		"""
 		Cette fonction teste si la fonction random.shuffle
 		retourne le même nombre d'élèments de départ
@@ -38,16 +35,14 @@ class RandomTest(unittest.TestCase):
 		tableau = list(range(100))
 
 		# Tableau après shuffle
-        random.shuffle(tableau)	
+		random.shuffle(tableau)
 
-        # On trie le tableau
-        tableau.sort()
+		tableau.sort()
 
 		# Test si on a le résultat escompté
 		self.assertEqual(tableau, list(range(100)))
 
 	def test_sample(self):
-
 		"""
 		Cette fonction teste si la fonction ranom.range
 		retourne bien une partie de l'objet en paramètre
